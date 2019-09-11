@@ -1,0 +1,11 @@
+---
+applications:
+- name: product
+  memory: 1024M
+  instances: 1
+  path: ./target/demo-0.0.1-SNAPSHOT.war
+  buildpack: https://github.com/cloudfoundry/java-buildpack.git
+  routes:
+  - route: product-wipro-rig.cfapps.io
+  services:
+     - myservice
